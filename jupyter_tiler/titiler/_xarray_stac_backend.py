@@ -504,6 +504,7 @@ class XarraySTACAPIBackend(STACAPIBackend):
             plain_items = [item.to_dict(transform_hrefs=False) for item in items]
             union_stack = stackstac.stack(
                 plain_items,
+                sortby_date=False,
                 assets=assets,
                 epsg=self.tms.crs.to_epsg(),
                 bounds=union_bounds,
