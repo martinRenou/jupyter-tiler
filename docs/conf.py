@@ -24,6 +24,14 @@ nitpick_ignore = [
         "py:class",
         "titiler.core.algorithm.base.BaseAlgorithm",
     ),  # TiTiler's docs don't include this
+    (
+        "py:class",
+        "rasterio.enums.Resampling",
+    ),  # rasterio's docs don't include this
+    (
+        "py:data",
+        "typing.Union",
+    ),  # produced by PEP 604 unions in signatures, not in python's inventory
 ]
 
 extensions = [
